@@ -1,0 +1,92 @@
+.consensus {
+  padding-bottom: 10.34rem;
+  .consensus_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 1.33rem;
+    min-height: 100vh;
+    .title {
+      margin: 7.5rem 0px 4.17rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Sora, Sora;
+      font-weight: bold;
+      font-size: 3.17rem;
+      color: #ffffff;
+      line-height: 3.71rem;
+      text-align: center;
+      font-style: normal;
+      text-transform: none;
+    }
+    .item_box {
+      padding: 2.67rem 1.33rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(26, 31, 46, 0.9);
+      border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
+      border: 0.08rem solid #20283f;
+      margin-bottom: 1.67rem;
+      > img {
+        width: 9.83rem;
+        height: 9.83rem;
+      }
+      .item_box_title {
+        margin-top: 0.83rem;
+        font-family: Sora, Sora;
+        font-weight: bold;
+        font-size: 1.67rem;
+        color: #ffffff;
+        line-height: 1.95rem;
+        text-align: center;
+        font-style: normal;
+        text-transform: none;
+      }
+      .tip {
+        font-family: Sora, Sora;
+        font-weight: 400;
+        font-size: 1.33rem;
+        color: #999999;
+        line-height: 1.56rem;
+        text-align: center;
+        font-style: normal;
+        text-transform: none;
+        margin-top: 0.63rem;
+      }
+      .devider {
+        width: 100%;
+        height: 0.08rem;
+        background: #20283f;
+        margin: 1.33rem 0px;
+      }
+      .value {
+        div {
+          font-family: Sora, Sora;
+          font-weight: 600;
+          font-size: 1.17rem;
+          color: #999999;
+          line-height: 2rem;
+          text-align: left;
+          font-style: normal;
+          text-transform: none;
+          margin-bottom: 0.67rem;
+          &:last-child {
+            margin-bottom: 0px;
+          }
+          span {
+            font-family: Sora, Sora;
+            font-weight: 600;
+            font-size: 1.17rem;
+            color: #ffffff;
+            line-height: 2rem;
+            text-align: left;
+            font-style: normal;
+            text-transform: none;
+          }
+        }
+      }
+    }
+  }
+}

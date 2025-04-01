@@ -200,7 +200,7 @@ const ModalContent = React.forwardRef((props: any, ref: any) => {
             </div>
             <div className="item">
               {" "}
-              已释放：{" "}
+              已解锁：{" "}
               <span>
                 {Number(IdoRecordData?.usdtAmount ?? 0) > 0
                   ? NumSplic1(
@@ -214,7 +214,7 @@ const ModalContent = React.forwardRef((props: any, ref: any) => {
             </div>
             <div className="item">
               {" "}
-              剩余额度：{" "}
+              待解锁：{" "}
               <span>
                 {Number(IdoRecordData?.usdtAmount ?? 0) > 0
                   ? NumSplic1(EthertoWei(IdoRecordData?.lockAmount ?? "0"), 4) +

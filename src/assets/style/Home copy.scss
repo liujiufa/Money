@@ -1,0 +1,150 @@
+.home {
+  padding-bottom: 10.34rem;
+  .home_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 1.33rem;
+    .title {
+      margin: 7.5rem 0px 4.17rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Sora, Sora;
+      font-weight: bold;
+      font-size: 3.17rem;
+      color: #ffffff;
+      line-height: 3.71rem;
+      text-align: center;
+      font-style: normal;
+      text-transform: none;
+    }
+    .swiperBox {
+      width: 100%;
+      height: 100%;
+      .slick-dots-bottom {
+        bottom: 2.67rem;
+        display: flex;
+        align-items: center;
+        li {
+          width: 0.83rem;
+          height: 0.83rem;
+          background: #3f3f3f;
+          border-radius: 50%;
+          &::after,
+          button {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+          }
+        }
+        .slick-active {
+          width: 1.17rem;
+          height: 1.17rem;
+          background: #fe7a30;
+          border-radius: 50%;
+          button {
+            background: transparent;
+          }
+        }
+      }
+
+      .box1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(26, 31, 46, 0.9);
+        border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
+        border: 0.08rem solid #20283f;
+        padding: 2.67rem 1.33rem 5.17rem;
+        min-height: 95vh;
+        .coin_logo {
+          width: 8.33rem;
+          height: 8.33rem;
+          border-radius: 0rem 0rem 0rem 0rem;
+        }
+        .coin_name {
+          font-family: Sora, Sora;
+          font-weight: bold;
+          font-size: 2rem;
+          color: #ffffff;
+          line-height: 2.34rem;
+          text-align: center;
+          font-style: normal;
+          text-transform: none;
+          margin: 0.83rem 0px 2.67rem;
+        }
+        .title1 {
+          font-family: Sora, Sora;
+          font-weight: 600;
+          font-size: 1.33rem;
+          color: #ffffff;
+          line-height: 1.56rem;
+          text-align: center;
+          font-style: normal;
+          text-transform: none;
+        }
+        .title2 {
+          margin: 1.33rem 0px 1.33rem;
+          font-family: Sora, Sora;
+          font-weight: 400;
+          font-size: 1.33rem;
+          color: #ffffff;
+          line-height: 1.56rem;
+          text-align: center;
+          font-style: normal;
+          text-transform: none;
+        }
+        .title2_text_left {
+          text-align: left;
+        }
+        .text1 {
+          font-family: Sora, Sora;
+          font-weight: 400;
+          font-size: 1.17rem;
+          color: #999999;
+          line-height: 2rem;
+          text-align: left;
+          font-style: normal;
+          text-transform: none;
+        }
+        .text2 {
+          margin: 0.67rem 0px 1.33rem;
+          font-family: Sora, Sora;
+          font-weight: 400;
+          font-size: 1.17rem;
+          color: #999999;
+          line-height: 2rem;
+          text-align: left;
+          font-style: normal;
+          text-transform: none;
+          span {
+            font-family: Sora, Sora;
+            font-weight: 400;
+            font-size: 1.17rem;
+            line-height: 2rem;
+            text-align: left;
+            font-style: normal;
+            text-transform: none;
+            color: #fff;
+            font-weight: 600;
+          }
+        }
+        .text3 {
+          font-family: Sora, Sora;
+          font-weight: 500;
+          font-size: 1.17rem;
+          color: #ffffff;
+          line-height: 2rem;
+          text-align: left;
+          font-style: normal;
+          text-transform: none;
+        }
+      }
+    }
+    .title1 {
+      width: 23rem;
+      text-align: center;
+    }
+  }
+}

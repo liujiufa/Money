@@ -222,7 +222,7 @@ const Home = () => {
             资产记录 <img src={go_to} alt="" />
           </div>
         </div>
-        <div className="sell">
+        {/* <div className="sell">
           <img src={money_logo} alt="" />
           <div className="sell_title">Money Coin预售</div>
           <div className="sell_info">
@@ -285,7 +285,7 @@ const Home = () => {
           >
             认购记录 <img src={go_to} alt="" />
           </div>
-        </div>
+        </div> */}
         <div className="buy_rule">
           <div className="buy_rule_title">IDO认购说明：</div>
           <div className="value">1.每个用户可以享受50%的直推奖励。</div>

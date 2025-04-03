@@ -59,7 +59,7 @@ const HomeContainer_Content = styled.div`
       height: 3rem;
       background: #1868b7;
       border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
-      font-family: Sora, Sora;
+      font-family: "Sora", "Sora";
       font-weight: 400;
       font-size: 1.17rem;
       color: #ffffff;
@@ -76,7 +76,7 @@ const HomeContainer_Content = styled.div`
       border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
       border: 0.08rem solid #999999;
       background-color: transparent;
-      font-family: Sora, Sora;
+      font-family: "Sora", "Sora";
       font-weight: 400;
       font-size: 1.17rem;
       color: #ffffff;
@@ -96,7 +96,7 @@ const HomeContainer_Content = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-family: Sora, Sora;
+      font-family: "Sora", "Sora";
       font-weight: 400;
       font-size: 1.33rem;
       color: #ffffff;
@@ -105,7 +105,7 @@ const HomeContainer_Content = styled.div`
       font-style: normal;
       text-transform: none;
       div {
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1rem;
         color: #585e69;
@@ -117,7 +117,7 @@ const HomeContainer_Content = styled.div`
     }
     .withdraw_box_bottom {
       input {
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 600;
         font-size: 1.67rem;
         color: #ffffff;
@@ -139,7 +139,7 @@ const HomeContainer_Content = styled.div`
         display: flex;
         align-items: center;
 
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.17rem;
         color: #50af95;
@@ -161,7 +161,7 @@ const HomeContainer_Content = styled.div`
     border-radius: 1.17rem 1.17rem 1.17rem 1.17rem;
     margin-top: 1.33rem;
     .result-top {
-      font-family: Sora, Sora;
+      font-family: "Sora", "Sora";
       font-weight: 400;
       font-size: 1.17rem;
       color: #9199a7;
@@ -173,7 +173,7 @@ const HomeContainer_Content = styled.div`
       justify-content: space-between;
       align-items: center;
       span {
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.17rem;
         color: #ffffff;
@@ -193,7 +193,7 @@ const HomeContainer_Content = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    font-family: Sora, Sora;
+    font-family: "Sora", "Sora";
     font-weight: 600;
     font-size: 1.17rem;
     color: #ffffff;
@@ -215,7 +215,7 @@ const ReturnBox = styled(FlexSBCBox)`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Sora, Sora;
+  font-family: "Sora", "Sora";
   font-weight: 400;
   font-size: 1.5rem;
   color: #ffffff;
@@ -226,7 +226,7 @@ const ReturnBox = styled(FlexSBCBox)`
   background: transparent;
   div {
     flex: 1;
-    font-family: Sora, Sora;
+    font-family: "Sora", "Sora";
     font-weight: 400;
     font-size: 1.5rem;
     color: #ffffff;
@@ -519,9 +519,9 @@ export default function Rank() {
         </div>
         <div className="withdraw_box">
           <div className="withdraw_box_top">
-            提现{" "}
+            {t("提现")}{" "}
             <div>
-              可用余额:{" "}
+              {t("可用余额")}:{" "}
               {NumSplic1(
                 EthertoWei(
                   (Active === "USDT"
@@ -548,12 +548,17 @@ export default function Rank() {
           </div>
         </div>
         <div className="result">
+          {Active === "USDT" && (
+            <>
+              {" "}
+              <div className="result-top">
+                {t("手续费")} <span>5%</span>
+              </div>
+              <div className="devider"></div>
+            </>
+          )}
           <div className="result-top">
-            手续费 <span>5%</span>
-          </div>
-          <div className="devider"></div>
-          <div className="result-top">
-            提现到账
+            {t("提现到账")}
             <span>
               {NumSplic1(
                 (Number(InputAmount) * (1 - 0.05)).toFixed(10) ?? 0,
@@ -570,7 +575,7 @@ export default function Rank() {
             withdrawFun();
           }}
         >
-          提现
+          {t("提现")}
         </div>
       </HomeContainer_Content>
     </HomeContainer>

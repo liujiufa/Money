@@ -27,7 +27,7 @@
       background-position: center;
       background-size: cover;
       .banner_title {
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: bold;
         font-size: 2rem;
         line-height: 2.34rem;
@@ -44,7 +44,7 @@
         justify-content: center;
         min-width: 10.67rem;
         height: 2.83rem;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 600;
         font-size: 1.17rem;
         color: #ffffff;
@@ -52,10 +52,29 @@
         text-align: center;
         font-style: normal;
         text-transform: none;
-        background: #ffa800;
-        box-shadow: 0rem 0rem 0.33rem 0rem #fe7a2e;
+        background: linear-gradient(
+          90deg,
+          #fc13ff 0%,
+          #513cff 50%,
+          #0acfff 100%
+        );
+        box-shadow: 0rem 0rem 0.5rem 0rem #f633ff;
         border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
-        border: 0.08rem solid #f09942;
+      }
+    }
+    .links {
+      margin-top: 1.67rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      img {
+        width: 3.5rem;
+        height: 3.5rem;
+        cursor: pointer;
+
+        &:nth-child(2) {
+          margin: 0px 3.5rem;
+        }
       }
     }
     .block1 {
@@ -73,7 +92,7 @@
         justify-content: center;
         padding-bottom: 1.33rem;
         border-bottom: 0.08rem solid #20283f;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: bold;
         font-size: 1.67rem;
         line-height: 1.95rem;
@@ -90,7 +109,7 @@
       }
       .block1_subtitle {
         color: #fbd67b;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 600;
         font-size: 1.33rem;
         line-height: 1.56rem;
@@ -101,7 +120,7 @@
       }
       .block1_item {
         margin-bottom: 1.33rem;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.17rem;
         color: #999999;
@@ -111,7 +130,7 @@
         text-transform: none;
         .block1_item_title {
           margin-bottom: 0.33rem;
-          font-family: Sora, Sora;
+          font-family: "Sora", "Sora";
           font-weight: 600;
           font-size: 1.17rem;
           color: #ffa800;
@@ -122,7 +141,7 @@
           color: #ffa800;
         }
         .block1_item_p {
-          font-family: Sora, Sora;
+          font-family: "Sora", "Sora";
           font-weight: 400;
           font-size: 1.17rem;
           color: #999999;
@@ -131,7 +150,7 @@
           font-style: normal;
           text-transform: none;
           span {
-            font-family: Sora, Sora;
+            font-family: "Sora", "Sora";
             font-weight: 600;
             font-size: 1.17rem;
             color: #ffffff;
@@ -141,7 +160,7 @@
             text-transform: none;
           }
           .block1_item_p_title {
-            font-family: Sora, Sora;
+            font-family: "Sora", "Sora";
             font-weight: 600;
             font-size: 1.17rem;
             color: #ffffff;
@@ -169,7 +188,7 @@
         justify-content: center;
         padding-bottom: 1.33rem;
         border-bottom: 0.08rem solid #20283f;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: bold;
         font-size: 1.67rem;
         line-height: 1.95rem;
@@ -185,7 +204,7 @@
         }
       }
       .block2_item {
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.17rem;
         color: #999999;
@@ -217,7 +236,7 @@
         justify-content: center;
         padding-bottom: 1.33rem;
         border-bottom: 0.08rem solid #20283f;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: bold;
         font-size: 1.67rem;
         line-height: 1.95rem;
@@ -236,7 +255,7 @@
         margin-top: 1.33rem;
       }
       .block3_item_subtitle {
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 600;
         font-size: 1.17rem;
         color: #ffffff;
@@ -249,7 +268,7 @@
 
       .block3_item {
         // margin-bottom: 1.33rem;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.17rem;
         color: #999999;
@@ -259,7 +278,7 @@
         text-transform: none;
         .block3_item_title {
           margin-bottom: 0.33rem;
-          font-family: Sora, Sora;
+          font-family: "Sora", "Sora";
           font-weight: 600;
           font-size: 1.17rem;
           color: #ffa800;
@@ -270,7 +289,7 @@
           color: #ffa800;
         }
         .block3_item_p {
-          font-family: Sora, Sora;
+          font-family: "Sora", "Sora";
           font-weight: 400;
           font-size: 1.17rem;
           color: #999999;
@@ -279,7 +298,7 @@
           font-style: normal;
           text-transform: none;
           span {
-            font-family: Sora, Sora;
+            font-family: "Sora", "Sora";
             font-weight: 600;
             font-size: 1.17rem;
             color: #ffffff;
@@ -289,7 +308,7 @@
             text-transform: none;
           }
           .block3_item_p_title {
-            font-family: Sora, Sora;
+            font-family: "Sora", "Sora";
             font-weight: 600;
             font-size: 1.17rem;
             color: #ffffff;
@@ -323,7 +342,7 @@
         justify-content: center;
         padding-bottom: 1.33rem;
         border-bottom: 0.08rem solid #20283f;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: bold;
         font-size: 1.67rem;
         line-height: 1.95rem;
@@ -340,7 +359,7 @@
       }
       .block4_title1 {
         color: #fbd67b;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 600;
         font-size: 1.33rem;
         line-height: 1.56rem;
@@ -357,7 +376,7 @@
       }
       .block4_item {
         .block4_item_title {
-          font-family: Sora, Sora;
+          font-family: "Sora", "Sora";
           font-weight: 600;
           font-size: 1.17rem;
           color: #ffa800;
@@ -367,7 +386,7 @@
           text-transform: none;
         }
         .block4_item_p {
-          font-family: Sora, Sora;
+          font-family: "Sora", "Sora";
           font-weight: 400;
           font-size: 1.17rem;
           color: #999999;
@@ -395,7 +414,7 @@
         justify-content: center;
         padding-bottom: 1.33rem;
         border-bottom: 0.08rem solid #20283f;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: bold;
         font-size: 1.67rem;
         line-height: 1.95rem;
@@ -412,7 +431,7 @@
       }
       .block5_item {
         margin-top: 1.33rem;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.17rem;
         color: #999999;
@@ -423,7 +442,7 @@
         .block5_item_person {
           display: flex;
           align-items: center;
-          font-family: Sora, Sora;
+          font-family: "Sora", "Sora";
           font-weight: 600;
           font-size: 1.17rem;
           line-height: 1.37rem;
@@ -454,7 +473,7 @@
         justify-content: center;
         padding-bottom: 1.33rem;
         border-bottom: 0.08rem solid #20283f;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: bold;
         font-size: 1.67rem;
         line-height: 1.95rem;
@@ -471,7 +490,7 @@
       }
       .block6_item {
         margin-top: 1.33rem;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.17rem;
         color: #ffffff;

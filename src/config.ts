@@ -2,7 +2,7 @@ import Token from "./ABI/ERC20Token.json";
 import Money_IDO from "./ABI/Money_IDO.json";
 import { defineChain } from "@reown/appkit/networks";
 // 正式
-export const isMain = false;
+export const isMain = true;
 export const curentBSCChainId: number = isMain ? 56 : 97;
 export const curentETHChainId: number = isMain ? 1 : 17000;
 
@@ -107,18 +107,9 @@ export const abiObj: abiObjType = {
 };
 
 export const Main: contractAddressType = {
-  USDTBSC: "0x55d398326f99059fF775485246999027B3197955",
-  BridgeBSC: "0x6f7cDbB867088D5945b465726834a782a2c0D7D0",
-  USDTUNI: "0x74cA830003Bc76693830d37DCcE9C56be78Ae66C",
-  BridgeUNI: "0x68d1CbEF2D485052385dD2a209F6F105528838B5",
-  PIJSBSC: "0x74cA830003Bc76693830d37DCcE9C56be78Ae66C",
-  PiBSC: "0x74cA830003Bc76693830d37DCcE9C56be78Ae66C",
-  UACFactory: "0x55D3a5458be5AFc639858825FaBc34CD3D5a6117",
-  WUAC: "0x001C41f7b0cB226a19dfBEc7a18C8a8DA249eC46",
-  UACRouter: "0x51d5273F6Eb69e37C86De5bDCF6efb0424255A5a",
-  WBNB: "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
-  PIJSFactory: "0x748C54e7bd5592F755DDFFE6Ad59b6Ef519E0635",
-  PIJSRouter: "0x83728DF7204BDbDE3cd23122a224F36C0Dbd6892",
+  USDT: "0x55d398326f99059fF775485246999027B3197955",
+  Money: "0x5dfE431415a5084c3014761EdFef44C6B075A0C5",
+  Money_IDO: "0x07423308e1fd36cbBA5fB76c1860b80901aFf590",
 };
 
 const Test = {

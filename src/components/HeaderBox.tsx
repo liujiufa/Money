@@ -20,6 +20,7 @@ import { createLoginSuccessAction, savePriceAction } from "../store/actions";
 import BigNumber from "big.js";
 import copy from "copy-to-clipboard";
 import demo from "../assets/image/demo.svg";
+import languageIcon_dark from "../assets/image/languageIcon_dark.png";
 
 import "../assets/style/layout.scss";
 import { Menu, Dropdown, Modal } from "antd";
@@ -144,8 +145,8 @@ const SetBox = styled.div`
     }
   }
   .langDrowDrop {
-    width: 1.66667rem;
-    height: 1.66667rem;
+    width: 2rem;
+    height: 2rem;
     flex-shrink: 0;
     > img {
       width: 100%;
@@ -158,9 +159,10 @@ const SetBox = styled.div`
     text-align: center;
     width: fit-content;
     height: 3.33rem;
-    background: #1da464;
+    background: linear-gradient(90deg, #fb14ff 0%, #4c47ff 50%, #0aceff 100%);
+    /* border-radius: 1.67rem 1.67rem 1.67rem 1.67rem; */
     border-radius: 1.67rem 1.67rem 1.67rem 1.67rem;
-    font-family: Sora, Sora;
+    font-family: "Sora", "Sora";
     font-weight: 600;
     font-size: 1.17rem;
     color: #ffffff;
@@ -187,8 +189,8 @@ const SetBox = styled.div`
       padding: 0.92rem 0px;
       border-radius: 12px;
       opacity: 1;
-      background: #fff;
-      border: 2px solid #d9d9d9;
+      background: #000;
+      border: 0.08rem solid rgb(240, 153, 66);
       .ant-dropdown-menu-item {
         padding: 0;
         .LangItem {
@@ -208,7 +210,7 @@ const SetBox = styled.div`
           display: flex;
           align-items: center;
           justify-content: flex-start;
-          color: #000;
+          color: #fff;
           font-family: Roboto;
           font-size: 1rem;
           font-style: normal;
@@ -226,7 +228,7 @@ const SetBox = styled.div`
   }
 
   > div {
-    margin-left: 0.5rem;
+    margin-left: 1rem;
   }
 `;
 
@@ -314,7 +316,7 @@ const MobileSlider_Menu = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: Sora, Sora;
+    font-family: "Sora", "Sora";
     font-weight: 600;
     font-size: 1.33rem;
     color: #ffffff;
@@ -327,7 +329,7 @@ const MobileSlider_Menu = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: Sora, Sora;
+      font-family: "Sora", "Sora";
       font-weight: 600;
       font-size: 1.33rem;
       color: #ffffff;
@@ -423,11 +425,11 @@ const MainLayout: any = () => {
   };
 
   let langObj = [
-    { value: "简体中文", key: "zh-CN" },
-    { value: "繁体中文", key: "zh-TW" },
     { value: "English", key: "en" },
-    // { value: "日本語", key: "ja" },
-    // { value: "한국인", key: "kr" },
+    // { value: "简体中文", key: "zh-CN" },
+    { value: "繁体中文", key: "zh-TW" },
+    { value: "日本語", key: "ja" },
+    { value: "한국인", key: "kr" },
     // { value: "Nederlands", key: "lang1" },
     // { value: "Polski", key: "lang2" },
     // { value: "Português (Brazil)", key: "lang3" },
@@ -448,7 +450,7 @@ const MainLayout: any = () => {
 
   const headerNavObj: any = [
     {
-      name: "项目介绍",
+      name: "首页",
       pathname: "/",
       menu: "menu pointer",
       menuActive: "menu pointer active",
@@ -459,13 +461,13 @@ const MainLayout: any = () => {
       menu: "menu pointer",
       menuActive: "menu pointer active",
     },
-    {
-      name: "Community governance",
-      pathname: "/Consensus",
-      menu: "menu pointer",
-      menuActive: "menu pointer active",
-      // isSoon: true,
-    },
+    // {
+    //   name: "Community governance",
+    //   pathname: "/Consensus",
+    //   menu: "menu pointer",
+    //   menuActive: "menu pointer active",
+    //   // isSoon: true,
+    // },
   ];
 
   // 导航
@@ -503,14 +505,14 @@ const MainLayout: any = () => {
       <HeaderContainer>
         <div className="HeaderNav">
           <LogoContainer>
-            <img
+            {/* <img
               src={showMask ? close_icon : open_icon}
               alt=""
               onClick={() => {
                 setShowMask(!showMask);
               }}
               className="menu_switch"
-            />
+            /> */}
 
             <img
               onClick={() => {
@@ -523,6 +525,19 @@ const MainLayout: any = () => {
           </LogoContainer>
 
           <SetBox>
+            <Dropdown
+              overlay={menu3}
+              placement="bottom"
+              overlayClassName="LangDropDown ChainDropDown"
+              trigger={["click"]}
+              arrow={false}
+              getPopupContainer={(triggerNode: any) => triggerNode}
+            >
+              <div className="langDrowDrop pointer">
+                <img src={languageIcon_dark} alt="" />
+              </div>
+            </Dropdown>
+
             {web3ModalAccount ? (
               <div
                 className="Connect  pointer "

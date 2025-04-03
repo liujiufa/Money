@@ -48,7 +48,7 @@ const ModalContainer_Close = styled(FlexCCBox)`
 
 export const ModalContainer_Title = styled(FlexCCBox)`
   width: 100%;
-  font-family: Sora, Sora;
+  font-family: "Sora","Sora";
   font-weight: 400;
   font-size: 1.5rem;
   color: #ffffff;
@@ -73,7 +73,7 @@ const ModalContainer_Content = styled.div`
   align-items: center;
 
   .tip {
-    font-family: Sora, Sora;
+    font-family: "Sora","Sora";
     font-weight: 400;
     font-size: 1.5rem;
     color: #ffffff;
@@ -122,7 +122,7 @@ const ModalContent = React.forwardRef((props: any, ref: any) => {
       visible={props?.ShowTipModal}
       className="Modal"
       centered
-      width={"26.08333rem"}
+      width={"22.08333rem"}
       closable={false}
       footer={null}
       destroyOnClose={true}
@@ -138,7 +138,7 @@ const ModalContent = React.forwardRef((props: any, ref: any) => {
           />
         </ModalContainer_Title>
         <ModalContainer_Content>
-          <div className="tip">认购成功</div>
+          <div className="tip">Success</div>
         </ModalContainer_Content>
       </ModalContainer>
     </AllModal>

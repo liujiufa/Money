@@ -50,7 +50,7 @@ const ModalContainer_Close = styled(FlexCCBox)`
 
 export const ModalContainer_Title = styled(FlexCCBox)`
   width: 100%;
-  font-family: Sora, Sora;
+  font-family: "Sora", "Sora";
   font-weight: 400;
   font-size: 1.5rem;
   color: #ffffff;
@@ -80,7 +80,7 @@ const ModalContainer_Content = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-family: Sora, Sora;
+      font-family: "Sora", "Sora";
       font-weight: 400;
       font-size: 1.33rem;
       color: #999999;
@@ -93,7 +93,7 @@ const ModalContainer_Content = styled.div`
         margin-bottom: 0px;
       }
       span {
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.33rem;
         color: #ffffff;
@@ -149,14 +149,14 @@ const ModalContent = React.forwardRef((props: any, ref: any) => {
       visible={props?.ShowTipModal}
       className="Modal"
       centered
-      width={"26.08333rem"}
+      width={"22.08333rem"}
       closable={false}
       footer={null}
       destroyOnClose={true}
     >
       <ModalContainer>
         <ModalContainer_Title>
-          {t("IDO记录")}
+          {t("Fair Launch")}
           <img
             src={close_icon}
             alt=""
@@ -169,7 +169,7 @@ const ModalContent = React.forwardRef((props: any, ref: any) => {
           <div className="items">
             <div className="item">
               {" "}
-              时间：{" "}
+              {t("时间")}：{" "}
               <span>
                 {Number(IdoRecordData?.usdtAmount ?? 0) > 0
                   ? dateFormat(
@@ -200,7 +200,7 @@ const ModalContent = React.forwardRef((props: any, ref: any) => {
             </div>
             <div className="item">
               {" "}
-              已解锁：{" "}
+              {t("已解锁")}：{" "}
               <span>
                 {Number(IdoRecordData?.usdtAmount ?? 0) > 0
                   ? NumSplic1(
@@ -214,7 +214,7 @@ const ModalContent = React.forwardRef((props: any, ref: any) => {
             </div>
             <div className="item">
               {" "}
-              待解锁：{" "}
+              {t("待解锁")}：{" "}
               <span>
                 {Number(IdoRecordData?.usdtAmount ?? 0) > 0
                   ? NumSplic1(EthertoWei(IdoRecordData?.lockAmount ?? "0"), 4) +

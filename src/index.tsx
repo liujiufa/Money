@@ -3,7 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-import 'swiper/css';
+import "swiper/css";
 import { Provider } from "react-redux";
 import { Web3ReactProvider } from "@web3-react/core";
 import store from "./store";

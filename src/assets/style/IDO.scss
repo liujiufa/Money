@@ -11,22 +11,24 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: Sora, Sora;
+      font-family: "Sora", "Sora";
       font-weight: bold;
-      font-size: 3.17rem;
-      color: #ffffff;
-      line-height: 3.71rem;
+      font-size: 2rem;
+      line-height: 2.34rem;
+      text-shadow: 0px 0px 1px #d47619;
       text-align: center;
       font-style: normal;
       text-transform: none;
+      color: #ffa800;
     }
     .introduce {
-      font-family: Sora, Sora;
+      text-indent: 2.66rem;
+      font-family: "Sora", "Sora";
       font-weight: 400;
-      font-size: 1.33rem;
-      color: #ffffff;
-      line-height: 1.56rem;
-      text-align: center;
+      font-size: 1.17rem;
+      color: #999999;
+      line-height: 2rem;
+      text-align: left;
       font-style: normal;
       text-transform: none;
       margin-bottom: 1.33rem;
@@ -38,7 +40,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.33rem;
         color: #ffffff;
@@ -50,7 +52,7 @@
           display: flex;
           align-items: center;
 
-          font-family: Sora, Sora;
+          font-family: "Sora", "Sora";
           font-weight: 400;
           font-size: 1.33rem;
           color: #ffffff;
@@ -72,7 +74,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.17rem;
         color: #ffffff;
@@ -81,6 +83,7 @@
         font-style: normal;
         text-transform: none;
         margin-top: 0.83rem;
+        border: 0.08rem solid rgb(240, 153, 66);
         img {
           width: 2rem;
           height: 2rem;
@@ -91,26 +94,38 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 7.5rem;
+      margin-top: 1.67rem;
+
       width: 100%;
       padding: 2.67rem 1.33rem;
       background: rgba(26, 31, 46, 0.9);
-      border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
-      border: 0.08rem solid #20283f;
+      // border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
+      // border: 0.08rem solid #20283f;
+      border: 0.08rem solid rgb(240, 153, 66);
+      border-radius: 1.67rem 1.67rem 1.67rem 1.67rem;
+
       > img {
         width: 8.33rem;
         height: 8.33rem;
       }
       .my_assets_title {
         margin: 0.83rem 0px 1.33rem;
-        font-family: Sora, Sora;
+        // font-family: "Sora","Sora";
+        // font-weight: bold;
+        // font-size: 2rem;
+        // color: #ffffff;
+        // line-height: 2.34rem;
+        // text-align: center;
+        // font-style: normal;
+        // text-transform: none;
+        font-family: "Sora", "Sora";
         font-weight: bold;
-        font-size: 2rem;
-        color: #ffffff;
-        line-height: 2.34rem;
+        font-size: 1.67rem;
+        line-height: 1.95rem;
         text-align: center;
         font-style: normal;
         text-transform: none;
+        color: #ffa800;
       }
       .assets_list {
         width: 100%;
@@ -124,7 +139,7 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          font-family: Sora, Sora;
+          font-family: "Sora", "Sora";
           font-weight: 400;
           font-size: 1.33rem;
           color: #50af95;
@@ -137,7 +152,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: Sora, Sora;
+            font-family: "Sora", "Sora";
             font-weight: 600;
             font-size: 1.67rem;
             color: #ffffff;
@@ -170,7 +185,7 @@
           align-items: center;
           width: 12.5rem;
           height: 3.83rem;
-          font-family: Sora, Sora;
+          font-family: "Sora", "Sora";
           font-weight: 600;
           font-size: 1.17rem;
           color: #ffffff;
@@ -194,7 +209,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.17rem;
         color: #ffffff;
@@ -213,19 +228,22 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 1.67rem;
+      margin-top: 7.5rem;
+
       width: 100%;
       padding: 2.67rem 1.33rem;
       background: rgba(26, 31, 46, 0.9);
-      border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
-      border: 0.08rem solid #20283f;
+      // border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
+      // border: 0.08rem solid #20283f;
+      border: 0.08rem solid rgb(240, 153, 66);
+      border-radius: 1.67rem 1.67rem 1.67rem 1.67rem;
       > img {
         width: 8.33rem;
         height: 8.33rem;
       }
       .sell_title {
         margin: 0.83rem 0px 1.33rem;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: bold;
         font-size: 2rem;
         color: #ffffff;
@@ -244,7 +262,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          font-family: Sora, Sora;
+          font-family: "Sora", "Sora";
           font-weight: 400;
           font-size: 1.33rem;
           color: #ffffff;
@@ -257,7 +275,7 @@
             margin-bottom: 0px;
           }
           div {
-            font-family: Sora, Sora;
+            font-family: "Sora", "Sora";
             font-weight: 400;
             font-size: 1.33rem;
             color: #ffffff;
@@ -271,7 +289,7 @@
       .btn {
         width: 100%;
         padding: 1.17rem;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 600;
         font-size: 1.17rem;
         color: #ffffff;
@@ -298,7 +316,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.17rem;
         color: #ffffff;
@@ -318,21 +336,31 @@
       width: 100%;
       padding: 2.67rem 1.33rem;
       background: rgba(26, 31, 46, 0.9);
-      border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
-      border: 0.08rem solid #20283f;
+      // border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
+      // border: 0.08rem solid #20283f;
+      border: 0.08rem solid rgb(240, 153, 66);
+      border-radius: 1.67rem 1.67rem 1.67rem 1.67rem;
       .buy_rule_title {
-        font-family: Sora, Sora;
+        // font-family: "Sora","Sora";
+        // font-weight: 600;
+        // font-size: 1.33rem;
+        // color: #ffffff;
+        // line-height: 1.56rem;
+        // text-align: left;
+        // font-style: normal;
+        // text-transform: none;
+        font-family: "Sora", "Sora";
         font-weight: 600;
-        font-size: 1.33rem;
-        color: #ffffff;
-        line-height: 1.56rem;
+        font-size: 1.17rem;
+        color: #ffa800;
+        line-height: 1.37rem;
         text-align: left;
         font-style: normal;
         text-transform: none;
         margin-bottom: 1.33rem;
       }
       .value {
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.17rem;
         color: #999999;

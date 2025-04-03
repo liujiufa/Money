@@ -2,6 +2,9 @@ import i18n from "i18next";
 import enUsTrans from "./en.json";
 import zhCnJTrans from "./zhjt.json";
 import zhCnFTrans from "./zh.json";
+
+import kr from "./kr.json";
+import ja from "./ja.json";
 import { initReactI18next } from "react-i18next";
 import { LOCAL_KEY } from "../config";
 // en = 英文，zh=中，ja=日，ko=韩，ar=阿拉伯
@@ -21,6 +24,12 @@ i18n
       },
       en: {
         translation: enUsTrans,
+      },
+      kr: {
+        translation: kr,
+      },
+      ja: {
+        translation: ja,
       },
     },
     //选择默认语言，选择内容为上述配置中的key，即en/zh

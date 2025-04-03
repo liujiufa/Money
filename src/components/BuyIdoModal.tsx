@@ -49,7 +49,7 @@ const ModalContainer_Close = styled(FlexCCBox)`
 
 export const ModalContainer_Title = styled(FlexCCBox)`
   width: 100%;
-  font-family: Sora, Sora;
+  font-family: "Sora", "Sora";
   font-weight: 400;
   font-size: 1.5rem;
   color: #ffffff;
@@ -82,7 +82,7 @@ const ModalContainer_Content = styled.div`
     border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
     border: 0.08rem solid #20283f;
     padding: 1.67rem 1.33rem;
-    font-family: Sora, Sora;
+    font-family: "Sora", "Sora";
     font-weight: 400;
     font-size: 1.17rem;
     color: #50af95;
@@ -101,7 +101,7 @@ const ModalContainer_Content = styled.div`
       border: none;
       outline: none;
       background: transparent;
-      font-family: Sora, Sora;
+      font-family: "Sora", "Sora";
       font-weight: 600;
       font-size: 1.17rem;
       color: #fff;
@@ -110,7 +110,7 @@ const ModalContainer_Content = styled.div`
       font-style: normal;
       text-transform: none;
       &::placeholder {
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 600;
         font-size: 1.17rem;
         color: #585e69;
@@ -130,7 +130,7 @@ const ModalContainer_Content = styled.div`
     padding: 0px 5.08rem;
     background: #fe7a2e;
     border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
-    font-family: Sora, Sora;
+    font-family: "Sora", "Sora";
     font-weight: 600;
     font-size: 1.17rem;
     color: #ffffff;
@@ -178,14 +178,14 @@ const ModalContent = React.forwardRef((props: any, ref: any) => {
       visible={props?.ShowTipModal}
       className="Modal"
       centered
-      width={"26.08333rem"}
+      width={"22.08333rem"}
       closable={false}
       footer={null}
       destroyOnClose={true}
     >
       <ModalContainer>
         <ModalContainer_Title>
-          {t("Fair Lanch")}
+          {t("Fair Launch")}
           <img
             src={close_icon}
             alt=""
@@ -225,7 +225,7 @@ const ModalContent = React.forwardRef((props: any, ref: any) => {
               <input
                 type="text"
                 value={UseNum}
-                placeholder="请输入认购数量"
+                placeholder={t("home0")}
                 onClick={(e: any) => {
                   let filteredValue: any = String(e.target.value)
                     ?.replace(/[+-]/g, "")

@@ -50,7 +50,7 @@ const HomeContainer_Content = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-family: Sora, Sora;
+      font-family: "Sora", "Sora";
       font-weight: 400;
       font-size: 1.33rem;
       color: #ffffff;
@@ -59,7 +59,7 @@ const HomeContainer_Content = styled.div`
       font-style: normal;
       text-transform: none;
       span {
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.17rem;
         color: #585e69;
@@ -82,7 +82,7 @@ const HomeContainer_Content = styled.div`
         border: none;
         background-color: transparent;
         outline: none;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 600;
         font-size: 1.17rem;
         color: #fff;
@@ -91,7 +91,7 @@ const HomeContainer_Content = styled.div`
         font-style: normal;
         text-transform: none;
         &::placeholder {
-          font-family: Sora, Sora;
+          font-family: "Sora", "Sora";
           font-weight: 600;
           font-size: 1.17rem;
           color: #585e69;
@@ -102,7 +102,7 @@ const HomeContainer_Content = styled.div`
         }
       }
       .max {
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.17rem;
         color: #fe7a2e;
@@ -127,7 +127,7 @@ const HomeContainer_Content = styled.div`
     border-radius: 2.5rem 2.5rem 2.5rem 2.5rem;
     border: 0.08rem solid #ff8d4d;
     padding: 1.17rem;
-    font-family: Sora, Sora;
+    font-family: "Sora", "Sora";
     font-weight: 600;
     font-size: 1.17rem;
     color: #ffffff;
@@ -139,7 +139,7 @@ const HomeContainer_Content = styled.div`
   }
   .trasfer_record {
     .record_title {
-      font-family: Sora, Sora;
+      font-family: "Sora", "Sora";
       font-weight: 600;
       font-size: 1.33rem;
       color: #ffffff;
@@ -158,7 +158,7 @@ const HomeContainer_Content = styled.div`
         margin-bottom: 1rem;
         .item {
           flex: 1;
-          font-family: Sora, Sora;
+          font-family: "Sora", "Sora";
           font-weight: 400;
           font-size: 1.17rem;
           color: #ffffff;
@@ -184,7 +184,7 @@ const HomeContainer_Content = styled.div`
       }
       .table_title {
         .item {
-          font-family: Sora, Sora;
+          font-family: "Sora", "Sora";
           font-weight: 400;
           font-size: 1.17rem;
           color: #999999;
@@ -203,7 +203,7 @@ const ReturnBox = styled(FlexSBCBox)`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Sora, Sora;
+  font-family: "Sora", "Sora";
   font-weight: 400;
   font-size: 1.5rem;
   color: #ffffff;
@@ -214,7 +214,7 @@ const ReturnBox = styled(FlexSBCBox)`
   background: transparent;
   div {
     flex: 1;
-    font-family: Sora, Sora;
+    font-family: "Sora", "Sora";
     font-weight: 400;
     font-size: 1.5rem;
     color: #ffffff;
@@ -505,11 +505,11 @@ export default function Rank() {
 
       <HomeContainer_Content>
         <div className="input_item">
-          <div className="input_title"> 地址</div>{" "}
+          <div className="input_title"> {t("地址")}</div>{" "}
           <div className="input_box">
             <input
               type="text"
-              placeholder="请输入地址"
+              placeholder={t("请输入地址")}
               value={InputAddress}
               onChange={(e: any) => {
                 setInputAddress(e?.target.value);
@@ -520,17 +520,17 @@ export default function Rank() {
         <div className="input_item mt133">
           <div className="input_title">
             {" "}
-            数量{" "}
+            {t("数量")}{" "}
             <span>
-              可用余额:{NumSplic1(EthertoWei(UserInfo?.usdtAmount ?? "0"), 4)}{" "}
-              USDT
+              {t("可用余额")}:
+              {NumSplic1(EthertoWei(UserInfo?.usdtAmount ?? "0"), 4)} USDT
             </span>
           </div>{" "}
           <div className="input_box">
             <input
               type="text"
               value={InputAmount}
-              placeholder="请输入转移数量"
+              placeholder={t("请输入转移数量")}
               onChange={(e: any) => {
                 setInputAmount(e.target.value);
               }}
@@ -543,7 +543,7 @@ export default function Rank() {
                 );
               }}
             >
-              全部
+              {t("全部")}
             </div>
           </div>
         </div>
@@ -553,15 +553,15 @@ export default function Rank() {
             transferFun();
           }}
         >
-          转移
+          {t("转移")}
         </div>
         <div className="trasfer_record">
-          <div className="record_title">转移记录</div>
+          <div className="record_title">{t("转移记录")}</div>
           <div className="table">
             <div className="table_title items">
-              <div className="item">时间</div>
-              <div className="item">地址</div>
-              <div className="item">数量</div>
+              <div className="item">{t("时间")}</div>
+              <div className="item">{t("地址")}</div>
+              <div className="item">{t("数量")}</div>
             </div>
             <div className="devider"></div>
             {TransferRecord?.map((item: any, index: any) => (

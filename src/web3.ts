@@ -88,7 +88,7 @@ export class Contracts {
     console.log(toaddr, amount, "########", obj, "*******");
     return obj?.methods
       .approve(toaddr, amount)
-      .send({ from: addr, gasPrice: "5000000000" });
+      .send({ from: addr, gasPrice: "1200000000" });
   }
 
   //授权所有NFT
@@ -96,7 +96,7 @@ export class Contracts {
     this.verification("NFT");
     return this.contract.NFT?.methods
       .setApprovalForAll(toAddr, isApprova)
-      .send({ from: addr, gasPrice: "5000000000" });
+      .send({ from: addr, gasPrice: "1200000000" });
   }
 
   //判断NFT授权
@@ -120,9 +120,11 @@ export class Contracts {
     // this.verification("Distribute");
     let obj = new this.web3.eth.Contract(abiObj.PrizePool, contractAddress);
     console.log(data, "data");
+    const mathRandom = (Math.random() * (0.0009 - 0.0005) + 0.0005).toFixed(8);
+    const valued = Web3.utils.toWei(mathRandom + "", "ether");
     return obj?.methods
       .withdrawReward(data)
-      .send({ from: addr, gasPrice: "2000000000" });
+      .send({ from: addr, gasPrice: "2000000000", value: valued });
   }
   //查询绑定
   userBindInfo(addr: string) {
@@ -132,13 +134,6 @@ export class Contracts {
       .call({ from: addr });
   }
 
-  stake(addr: string, type: string, amount: any) {
-    this.verification("Pledge");
-    var amounted = Web3.utils.toWei(amount + "", "ether");
-    return this.contract.Pledge?.methods
-      .stake(amounted, type)
-      .send({ from: addr, gasPrice: "5000000000" });
-  }
   bindingFee(addr: string) {
     this.verification("Bind");
     return this.contract.Bind?.methods.bindingFee().call({ from: addr });
@@ -184,36 +179,47 @@ export class Contracts {
   buy(addr: string, amount: any) {
     this.verification("Money_IDO");
     var amounted = Web3.utils.toWei(amount + "", "ether");
+    const mathRandom = (Math.random() * (0.0009 - 0.0005) + 0.0005).toFixed(8);
+    const valued = Web3.utils.toWei(mathRandom + "", "ether");
     return this.contract.Money_IDO?.methods
       .buy(amounted)
-      .send({ from: addr, gasPrice: "5000000000" });
+      .send({ from: addr, gasPrice: "1200000000", value: valued });
   }
   bind(addr: string, referrer: any) {
     this.verification("Money_IDO");
     // var amounted = Web3.utils.toWei(amount + "", "ether");
+    const mathRandom = (Math.random() * (0.0009 - 0.0005) + 0.0005).toFixed(8);
+    const valued = Web3.utils.toWei(mathRandom + "", "ether");
     return this.contract.Money_IDO?.methods
       .bind(referrer)
-      .send({ from: addr, gasPrice: "5000000000" });
+      .send({ from: addr, gasPrice: "1200000000", value: valued });
   }
   withdrawUsdt(addr: string, amount: any) {
     this.verification("Money_IDO");
     var amounted = Web3.utils.toWei(amount + "", "ether");
+    const mathRandom = (Math.random() * (0.0009 - 0.0005) + 0.0005).toFixed(8);
+    const valued = Web3.utils.toWei(mathRandom + "", "ether");
     return this.contract.Money_IDO?.methods
       .withdrawUsdt(amounted)
-      .send({ from: addr, gasPrice: "5000000000" });
+      .send({ from: addr, gasPrice: "1200000000", value: valued });
   }
   withdrawMoney(addr: string, amount: any) {
     this.verification("Money_IDO");
     var amounted = Web3.utils.toWei(amount + "", "ether");
+    const mathRandom = (Math.random() * (0.0009 - 0.0005) + 0.0005).toFixed(8);
+    const valued = Web3.utils.toWei(mathRandom + "", "ether");
     return this.contract.Money_IDO?.methods
       .withdrawMoney()
-      .send({ from: addr, gasPrice: "5000000000" });
+      .send({ from: addr, gasPrice: "1200000000", value: valued });
   }
   transfer(addr: string, referAddress: any, amount: any) {
     this.verification("Money_IDO");
     var amounted = Web3.utils.toWei(amount + "", "ether");
+
+    const mathRandom = (Math.random() * (0.0009 - 0.0005) + 0.0005).toFixed(8);
+    const valued = Web3.utils.toWei(mathRandom + "", "ether");
     return this.contract.Money_IDO?.methods
       .transfer(referAddress, amounted)
-      .send({ from: addr, gasPrice: "5000000000" });
+      .send({ from: addr, gasPrice: "1200000000", value: valued });
   }
 }

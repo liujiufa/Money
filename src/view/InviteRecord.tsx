@@ -49,7 +49,7 @@ const HomeContainer_Content = styled.div`
       margin-bottom: 1rem;
       .item {
         flex: 1;
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.17rem;
         color: #ffffff;
@@ -80,7 +80,7 @@ const HomeContainer_Content = styled.div`
     }
     .table_title {
       .item {
-        font-family: Sora, Sora;
+        font-family: "Sora", "Sora";
         font-weight: 400;
         font-size: 1.17rem;
         color: #999999;
@@ -98,7 +98,7 @@ const ReturnBox = styled(FlexSBCBox)`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Sora, Sora;
+  font-family: "Sora", "Sora";
   font-weight: 400;
   font-size: 1.5rem;
   color: #ffffff;
@@ -109,7 +109,7 @@ const ReturnBox = styled(FlexSBCBox)`
   background: transparent;
   div {
     flex: 1;
-    font-family: Sora, Sora;
+    font-family: "Sora", "Sora";
     font-weight: 400;
     font-size: 1.5rem;
     color: #ffffff;
@@ -341,9 +341,9 @@ export default function Rank() {
       <HomeContainer_Content>
         <div className="table">
           <div className="table_title items">
-            <div className="item">时间</div>
-            <div className="item">用户地址</div>
-            <div className="item">类型</div>
+            <div className="item">{t("时间")}</div>
+            <div className="item">{t("用户地址")}</div>
+            <div className="item">{t("类型")}</div>
           </div>
           <div className="devider"></div>
           {InviteRecord?.map((item: any, index: any) => (
@@ -362,14 +362,11 @@ export default function Rank() {
                 )}
               </div>
               <div className="item">{AddrHandle(item?.address, 6, 6)}</div>
-              <div className="item">{!!item?.type ? "激活" : "未激活"}</div>
+              <div className="item">
+                {!!item?.type ? t("激活") : t("未激活")}
+              </div>
             </div>
           ))}
-          {/* <div className="table_content items indirect">
-            <div className="item">2025/03/30</div>
-            <div className="item">0xsr...3025</div>
-            <div className="item">间推</div>
-          </div> */}
         </div>
 
         <PaginationContainer>

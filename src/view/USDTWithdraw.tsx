@@ -560,10 +560,12 @@ export default function Rank() {
           <div className="result-top">
             {t("提现到账")}
             <span>
-              {NumSplic1(
-                (Number(InputAmount) * (1 - 0.05)).toFixed(10) ?? 0,
-                4
-              )}{" "}
+              {Active === "USDT"
+                ? NumSplic1(
+                    (Number(InputAmount) * (1 - 0.05)).toFixed(10) ?? 0,
+                    4
+                  )
+                : NumSplic1(Number(InputAmount).toFixed(10) ?? 0, 4)}{" "}
               {Active === "USDT" ? "USDT" : "Money"}
             </span>
           </div>

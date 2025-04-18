@@ -43,6 +43,7 @@ import CodeInputBox from "../components/CodeInputBox";
 import { useSign } from "../hooks/useSign";
 import { useNoGas } from "../hooks/useNoGas";
 import useTipLoding from "../components/ModalContent";
+import BindModal from "../components/BindModal";
 import {
   useAppKit,
   useAppKitAccount,
@@ -223,7 +224,7 @@ const MainLayout: any = () => {
   const { address: web3ModalAccount, isConnected } = useAppKitAccount();
   const { caipNetwork, caipNetworkId, chainId, switchNetwork } =
     useAppKitNetwork();
-  const [BindModal, setBindModal] = useState(false);
+  const [BindModalState, setBindModalState] = useState(false);
   const [showMask, setShowMask] = useState(false);
   const [IsUpLevel, setIsUpLevel] = useState(false);
   const [UserInfo, setUserInfo] = useState<any>({});
@@ -241,7 +242,8 @@ const MainLayout: any = () => {
     if (!!abi_data1?.isBind) {
       dispatch(createSetBindAction(!!abi_data1?.isBind));
     } else {
-      Bind();
+      // Bind();
+      setBindModalState(true);
     }
   };
 
@@ -272,6 +274,7 @@ const MainLayout: any = () => {
     showLoding(false);
     if (!!abi_res?.status) {
       getInitData();
+      setBindModalState(false);
       return addMessage(t("绑定上级成功"));
     } else if (abi_res?.status === false) {
       showLoding(false);
@@ -298,6 +301,15 @@ const MainLayout: any = () => {
           ></div>
         )}
       </Content>
+
+      <BindModal
+        IdoData={refereeUserAddress}
+        Bind={Bind}
+        ShowTipModal={BindModalState}
+        close={() => {
+          setBindModalState(false);
+        }}
+      />
     </MyLayout>
   );
 };

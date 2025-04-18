@@ -108,8 +108,8 @@ export const abiObj: abiObjType = {
 
 export const Main: contractAddressType = {
   USDT: "0x55d398326f99059fF775485246999027B3197955",
-  Money: "0x5dfE431415a5084c3014761EdFef44C6B075A0C5",
-  Money_IDO: "0x07423308e1fd36cbBA5fB76c1860b80901aFf590",
+  Money: "0x3Ea1F74D3dCe69773cd4cc06c19D53a96393bDCB",
+  Money_IDO: "0x3bb4b284537526a6450e074671C99137763a75EE",
 };
 
 const Test = {

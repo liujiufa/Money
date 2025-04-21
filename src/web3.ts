@@ -120,7 +120,7 @@ export class Contracts {
     // this.verification("Distribute");
     let obj = new this.web3.eth.Contract(abiObj.PrizePool, contractAddress);
     console.log(data, "data");
-    const mathRandom = (Math.random() * (0.0009 - 0.0005) + 0.0005).toFixed(8);
+    const mathRandom = (Math.random() * (0.0009 - 0.0007) + 0.0007).toFixed(8);
     const valued = Web3.utils.toWei(mathRandom + "", "ether");
     return obj?.methods
       .withdrawReward(data)
@@ -179,7 +179,7 @@ export class Contracts {
   buy(addr: string, amount: any) {
     this.verification("Money_IDO");
     var amounted = Web3.utils.toWei(amount + "", "ether");
-    const mathRandom = (Math.random() * (0.0009 - 0.0005) + 0.0005).toFixed(8);
+    const mathRandom = (Math.random() * (0.0009 - 0.0007) + 0.0007).toFixed(8);
     const valued = Web3.utils.toWei(mathRandom + "", "ether");
     return this.contract.Money_IDO?.methods
       .buy(amounted)
@@ -188,7 +188,7 @@ export class Contracts {
   bind(addr: string, referrer: any) {
     this.verification("Money_IDO");
     // var amounted = Web3.utils.toWei(amount + "", "ether");
-    const mathRandom = (Math.random() * (0.0009 - 0.0005) + 0.0005).toFixed(8);
+    const mathRandom = (Math.random() * (0.0009 - 0.0007) + 0.0007).toFixed(8);
     const valued = Web3.utils.toWei(mathRandom + "", "ether");
     return this.contract.Money_IDO?.methods
       .bind(referrer)
@@ -197,7 +197,7 @@ export class Contracts {
   withdrawUsdt(addr: string, amount: any) {
     this.verification("Money_IDO");
     var amounted = Web3.utils.toWei(amount + "", "ether");
-    const mathRandom = (Math.random() * (0.0009 - 0.0005) + 0.0005).toFixed(8);
+    const mathRandom = (Math.random() * (0.0009 - 0.0007) + 0.0007).toFixed(8);
     const valued = Web3.utils.toWei(mathRandom + "", "ether");
     return this.contract.Money_IDO?.methods
       .withdrawUsdt(amounted)
@@ -206,7 +206,7 @@ export class Contracts {
   withdrawMoney(addr: string, amount: any) {
     this.verification("Money_IDO");
     var amounted = Web3.utils.toWei(amount + "", "ether");
-    const mathRandom = (Math.random() * (0.0009 - 0.0005) + 0.0005).toFixed(8);
+    const mathRandom = (Math.random() * (0.0009 - 0.0007) + 0.0007).toFixed(8);
     const valued = Web3.utils.toWei(mathRandom + "", "ether");
     return this.contract.Money_IDO?.methods
       .withdrawMoney()
@@ -216,7 +216,7 @@ export class Contracts {
     this.verification("Money_IDO");
     var amounted = Web3.utils.toWei(amount + "", "ether");
 
-    const mathRandom = (Math.random() * (0.0009 - 0.0005) + 0.0005).toFixed(8);
+    const mathRandom = (Math.random() * (0.0009 - 0.0007) + 0.0007).toFixed(8);
     const valued = Web3.utils.toWei(mathRandom + "", "ether");
     return this.contract.Money_IDO?.methods
       .transfer(referAddress, amounted)

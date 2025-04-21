@@ -231,7 +231,6 @@ const MainLayout: any = () => {
 
   const getInitData = async () => {
     let abi_data1: any = null;
-
     try {
       abi_data1 = await Contracts.example?.viewUserInfo(
         web3ModalAccount as string
@@ -243,6 +242,15 @@ const MainLayout: any = () => {
       dispatch(createSetBindAction(!!abi_data1?.isBind));
     } else {
       // Bind();
+      let tag = await web3.utils.isAddress(window.location.pathname.slice(1));
+      if (tag) {
+        refereeUserAddress = window.location.pathname.slice(1);
+      } else {
+        refereeUserAddress = await Contracts.example?.topAdd(
+          web3ModalAccount as string
+        );
+        // debugger;
+      }
       setBindModalState(true);
     }
   };

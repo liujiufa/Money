@@ -196,9 +196,7 @@ const ModalContent = React.forwardRef((props: any, ref: any) => {
           />
         </ModalContainer_Title>
         <ModalContainer_Content>
-          <div className="input_box">
-            {AddrHandle("0x8d4044d24a839a0332e04374fab9a8b021345232", 10, 10)}
-          </div>
+          <div className="input_box">{AddrHandle(props?.IdoData, 10, 10)}</div>
           <div
             className="btn"
             onClick={() => {
